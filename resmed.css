@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url("https://www.ifpb.edu.br/painel/painel-ifpb/marketing-ifpb.png/@@images/image.png") center/cover no-repeat fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(4px);
+  background: rgba(255,255,255,0.2);
+  z-index: -1;
+}
+
+
+header {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: url("semadec-banner.png") center/cover no-repeat;
+  background-attachment: fixed;
+
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.card {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+
+  margin: 30px auto;
+  padding: 25px;
+  max-width: 900px;
+
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.6);
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  color: #222;
+}
+
+.card h2 {
+  color: #2E7D32;
+  margin-bottom: 15px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th, .table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.table th {
+  background: #2E7D32;
+  color: white;
+}
+
+.table tr:hover {
+  background: rgba(46,125,50,0.1);
+}
+
+.card p {
+  padding: 10px;
+  margin: 5px 0;
+  background: rgba(0,0,0,0.05);
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.card p:hover {
+  background: rgba(46,125,50,0.1);
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 30vh;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .table th, .table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+.card-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-voltar {
+  padding: 14px 28px;
+  border-radius: 12px;
+  border: none;
+
+  background: linear-gradient(135deg, #2c7be5, #1a4fa3);
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 6px 18px rgba(44, 123, 229, 0.4);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-voltar:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(44, 123, 229, 0.6);
+
+  background: linear-gradient(135deg, #1a4fa3, #163d82);
+}
+
+.btn-voltar:active {
+  transform: scale(0.96);
+}
+
+.btn {
+  width: 100%;
+  padding: 14px 28px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #2c7be5, #1a4fa3);
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 6px 18px rgba(44, 123, 229, 0.4);
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(44, 123, 229, 0.6);
+
+  background: linear-gradient(135deg, #1a4fa3, #163d82);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
