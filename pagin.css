@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: url("https://www.ifpb.edu.br/campus/joaopessoa/noticias/2026/03/abertas-as-pre-inscricoes-para-a-semadec-2026/semadec_joaopessoa.jpg/@@images/image-1480-7e4ec1620de2f1d0afa13b0d08d194a2.jpeg") center/cover no-repeat;
+
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+header h1,
+header p,
+header button {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  animation: fadeDown 1.2s ease;
+
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.8);
+}
+
+header p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin-top: 10px;
+  animation: fadeUp 1.5s ease;
+
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.7);
+}
+
+header button {
+  margin-top: 40px;
+  padding: 14px 28px;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.3);
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+
+  color: white;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+  animation: fadeUp 1.8s ease;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+header button:hover {
+  background: #2c7be5;
+  border-color: #2c7be5;
+
+  transform: translateY(-3px) scale(1.05);
+
+  box-shadow: 0 12px 30px rgba(44, 123, 229, 0.6);
+}
+
+nav {
+  background: #222;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+nav li:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.destaque {
+  background: #2c7be5;
+  color: white;
+}
+
+.accordion-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+  background: #fafafa;
+  padding: 0 10px;
+}
+
+.accordion-content.active {
+  max-height: 100px;
+  padding: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-secundario {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-secundario:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.table th {
+  background: #f3f4f6;
+  text-align: left;
+}
+
+#inscricoes button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#inscricoes button:hover {
+  background: #2563eb;
+  color: white;
+}
